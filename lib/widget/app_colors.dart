@@ -12,4 +12,5 @@ class AppColors {
   static const Color textSenary = Color(0xFF000000);
   static const Color textSeptenary = Color(0xFF000000);
   static const Color textOctonary = Color(0xFF000000);
+  static const Color white = Color(0xFFFFFFFF);
 }

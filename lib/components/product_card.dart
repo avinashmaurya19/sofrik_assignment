@@ -21,18 +21,16 @@ class ProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            AspectRatio(
-              aspectRatio: 1,
-              child: CachedNetworkImage(
-                imageUrl: product.image ?? '',
-                fit: BoxFit.cover,
-                placeholder: (context, url) => ShimmerContainer(
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
-                errorWidget: (context, url, error) => const Center(
-                  child: Icon(Icons.broken_image_outlined, size: 48),
-                ),
+            CachedNetworkImage(
+              height: 140,
+              imageUrl: product.image ?? '',
+              fit: BoxFit.cover,
+              placeholder: (context, url) => ShimmerContainer(
+                width: double.infinity,
+                height: double.infinity,
+              ),
+              errorWidget: (context, url, error) => const Center(
+                child: Icon(Icons.broken_image_outlined, size: 48),
               ),
             ),
             Padding(
